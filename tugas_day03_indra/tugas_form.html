@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="latihan_form_boostrap.css" />
+  </head>
+  <body>
+    <div id="container">
+      <div id="header">
+        <img
+          src="https://p.kindpng.com/picc/s/485-4850258_bootstrap-logo-png-image-free-download-searchpng-logos.png"
+          alt="logo bootstrap"
+        />
+        <h2>Checkout form</h2>
+        <br />
+        <p>
+          Below is an example form built entirely with Bootstrap’s form
+          controls. Each required form group has a validation state that can be
+          triggered by attempting to submit the form without completing it.
+        </p>
+      </div>
+      <div id="main-content">
+        <div id="left-content">
+          <h4>Billing address</h4>
+          <div id="name">
+            <div class="full-name">
+              <label for="">First name</label>
+              <input type="text" />
+            </div>
+            <div class="full-name">
+              <label for="">Last name</label>
+              <input type="text" />
+            </div>
+          </div>
+          <div id="username">
+            <label for="">Username</label>
+            <div>
+              <span>@</span>
+              <input type="text" placeholder="Username" />
+            </div>
+          </div>
+          <div class="address">
+            <label for="">Email</label>
+            <span>(optional)</span>
+            <input type="email" placeholder="you@example.com" />
+          </div>
+          <div class="address">
+            <label for="">Address</label>
+            <input type="address" placeholder="1234 Main St" />
+          </div>
+          <div class="address">
+            <label for="">Address 2</label>
+            <span>(optional)</span>
+            <input type="address" placeholder="Apartment or suite" />
+          </div>
+          <div id="region">
+            <div id="country">
+              <label for="">Country</label>
+              <select name="" id="">
+                <option value="">Choose...</option>
+                <option value="">United States</option>
+              </select>
+            </div>
+            <div id="state">
+              <label for="">State</label>
+              <select name="" id="">
+                <option value="">Choose...</option>
+                <option value="">California</option>
+              </select>
+            </div>
+            <div id="zip">
+              <label for="">Zip</label>
+              <input type="text" />
+            </div>
+          </div>
+          <hr />
+          <div class="control">
+            <input type="checkbox" name="" id="" />
+            <label for="">Shipping address is the same as my billing address</label>
+          </div>
+          <div class="control">
+            <input type="checkbox" name="" id="" />
+            <label for="">Save this information for next time</label>
+          </div>
+          <hr>
+          <h4>Payment</h4>
+          <div class="payment">
+            <input type="radio" name="payment">
+            <label for="">Credit card</label>
+          </div>
+          <div class="payment">
+            <input type="radio" name="payment">
+            <label for="">Debit card</label>
+          </div>
+          <div class="payment">
+            <input type="radio" name="payment">
+            <label for="">PayPal</label>
+          </div>
+          <div id="card">
+            <div class="payCard">
+                <label for="">Name on card</label>
+                <input type="text">
+                <small>Full name as displayed on card</small>
+            </div>
+            <div class="payCard">
+                <label for="">Credit card number</label>
+                <input type="text">
+            </div>
+          </div>
+          <div id="expCard">
+              <div class="ccExpCard">
+                  <label for="">Expiration</label>
+                  <input type="text">
+              </div>
+              <div class="ccExpCard">
+                  <label for="">CVV</label>
+                  <input type="text">
+              </div>
+          </div>
+          <hr>
+          <button id="checkout">Continue to checkout</button>
+        </div>
+        <div id="right-content">
+          <h4>
+            <span>Your cart</span>
+            <span>3</span>
+          </h4>
+          <li class="list-item">
+            <div>
+              <h6>Product name</h6>
+              <small>Brief description</small>
+            </div>
+            <h5>$12</h5>
+          </li>
+          <li class="list-item">
+            <div>
+              <h6>Second product</h6>
+              <small>Brief description</small>
+            </div>
+            <h5>$8</h5>
+          </li>
+          <li class="list-item">
+            <div>
+              <h6>Third item</h6>
+              <small>Brief description</small>
+            </div>
+            <h5>$5</h5>
+          </li>
+          <li class="list-item" style="background-color:whitesmoke">
+            <div>
+              <h6 style="color: #28a745">Promo code</h6>
+              <small style="color: #28a745">EXAMPLECODE</small>
+            </div>
+            <h5 style="color: #28a745">-$5</h5>
+          </li>
+          <li class="list-item">
+            <div>
+              <h6>Total (USD)</h6>
+            </div>
+            <h5 style="color: black">$20</h5>
+          </li>
+          <form action="" id="promo">
+            <input type="text" placeholder="Promo code" />
+            <button>Redeem</button>
+          </form>
+        </div>
+      </div>
+      <div id="footer">
+        <p>© 2017-2020 Company Name</p>
+        <ul>
+          <a href="">Privacy</a>
+          <a href="">Terms</a>
+          <a href="">Support</a>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,505 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 1349px;
+  height: 1569px;
+  list-style: none;
+  background-color: whitesmoke;
+}
+hr {
+  color: #808080;
+  border-top: 1px solid white;
+  margin: 16px 0 24px 0;
+}
+
+#container {
+  height: 1569px;
+  width: 960px;
+  margin: 0 195px;
+  padding: 0 15px;
+  max-width: 960px;
+  text-align: left;
+}
+
+#header {
+  width: 930px;
+  height: 314px;
+  text-align: center;
+  padding: 48px 0;
+}
+
+#main-content {
+  height: 1107px;
+  width: 960px;
+  margin: 0 -15px;
+  text-align: left;
+  display: flex;
+}
+
+#footer {
+  height: 100px;
+  width: 930px;
+  margin: 48px 0;
+  padding: 48px 0 0;
+}
+#header img {
+  height: 72px;
+  width: 72px;
+  margin: 0 429px 24px 429px;
+}
+
+#header h2 {
+  font-size: 32px;
+  font-weight: 500px;
+  height: 38px;
+  width: 930px;
+  margin: 0 0 8px 0;
+}
+
+#header p {
+  font-size: 20px;
+  font-weight: 300;
+  height: 60px;
+  width: 930px;
+  margin: 0 0 16px 0;
+}
+
+#footer p {
+  height: 24px;
+  width: 930px;
+  margin: 0 0 4px 0;
+  font-size: 16px;
+  text-align: center;
+  color: gray;
+}
+
+#footer ul {
+  font-size: 16px;
+  height: 24px;
+  width: 930px;
+  margin: 0 0 16px 0;
+  text-align: center;
+}
+
+#footer a {
+  color: #0056b3;
+}
+
+#left-content {
+  width: 640px;
+  height: 1109.42px;
+  padding: 0 15px 0 15px;
+  font-size: 16px;
+  text-align: left;
+  position: relative;
+}
+
+#right-content {
+  width: 320px;
+  height: 1085.42px;
+  font-size: 16px;
+  text-align: left;
+  padding: 0 15px 0 15px;
+  position: relative;
+}
+
+#right-content h4 {
+  font-size: 24px;
+  font-weight: 500;
+  height: 28.8px;
+  width: 290px;
+  margin-bottom: 16px;
+  display: flex;
+  text-align: left;
+  justify-content: space-between;
+  align-items: center;
+}
+#right-content span {
+  font-size: 24px;
+  font-weight: 500;
+  text-align: left;
+  height: 28.8px;
+  width: 93.5px;
+  color: #6c757d;
+}
+
+#right-content span + span {
+  border: 160px;
+  border-radius: 160px;
+  color: #ffffff;
+  text-align: right;
+  font-size: 18px;
+  font-weight: 700;
+  height: 27;
+  width: 31.95px;
+  padding: 5px 11px 5px 11px;
+  background-color: #6c757d;
+}
+
+.list-item {
+  font-size: 16px;
+  text-align: left;
+  height: 65px;
+  width: 290px;
+  border: 1px solid #ced4da;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color:white
+}
+
+.list-item div {
+  font-size: 16px;
+  text-align: left;
+  height: 39px;
+  width: 96px;
+}
+.list-item h6 {
+  font-size: 16px;
+  font-weight: 500;
+  text-align: left;
+  height: 19px;
+  width: 107px;
+}
+
+.list-item small {
+  font-size: 13px;
+  text-align: left;
+  color: #6c757d;
+  height: auto;
+  width: auto;
+  display: inline;
+}
+
+.list-item h5 {
+  font-size: 16px;
+  text-align: right;
+  color: #6c757d;
+  height: 39px;
+  width: 27px;
+}
+
+#promo {
+  font-size: 16px;
+  height: 56px;
+  width: 290px;
+  border: 1px solid  #ced4da;
+  padding: 8px;
+  display: flex;
+  border-radius: 4px;
+  margin-top: 20px;
+  background-color:white
+}
+
+#promo input {
+  font-size: 16px;
+  height: 38px;
+  width: 192px;
+  border: 1px solid  #ced4da;
+  padding: 6px 12px;
+  position: relative;
+  border-radius: 4px;
+}
+
+#promo button {
+  text-align: center;
+  background-color: #6c757d;
+  border: 1px solid #6c757d;
+  border-radius: 4px;
+  height: 38px;
+  width: 81px;
+  color: white;
+}
+
+#left-content h4 {
+  font-size: 24px;
+  height: 28px;
+  width: 610px;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+#name {
+  height: 86px;
+  width: 640px;
+  margin: 0 -15px;
+  display: flex;
+}
+
+.full-name {
+  height: 70px;
+  width: 320px;
+  margin-bottom: 16px;
+  padding: 0 15px;
+  position: relative;
+}
+
+.full-name label {
+  height: 24px;
+  width: 71px;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+
+.full-name input {
+  height: 38px;
+  width: 290px;
+  border: 1px solid #ced4da;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+#username {
+  height: 70px;
+  width: 610px;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+#username label {
+  height: 24px;
+  width: 69px;
+  margin-bottom: 8px;
+}
+#username span {
+  background-color: #e9ecef;
+  height: 38px;
+  width: 40px;
+  border: 1px solid #ced4da;
+  padding: 6px 12px;
+  display: flex;
+  border-radius: 4px;
+}
+#username input {
+  height: 38px;
+  width: 570px;
+  border: 1px solid #ced4da;
+  padding: 6px 12px;
+  position: relative;
+}
+#username div {
+  display: flex;
+}
+
+.address {
+  height: 70px;
+  width: 610px;
+  margin-bottom: 16px;
+}
+.address label {
+  height: 24px;
+  width: 108px;
+  margin-bottom: 8px;
+}
+
+.address input {
+  height: 38px;
+  width: 610px;
+  border: 1px solid #ced4da;
+  padding: 6px 12px;
+  border-radius: 4px;
+  margin-top: 14px;
+}
+.address span {
+  margin-bottom: 8px;
+}
+
+#region {
+  height: 86px;
+  width: 640px;
+  margin: 0 -15px;
+  display: flex;
+}
+
+#country {
+  height: 70px;
+  width: 267px;
+  margin-bottom: 16px;
+  padding: 0 15px;
+  position: relative;
+}
+#country label {
+  height: 24px;
+  width: 56px;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+#country select {
+  height: 38px;
+  width: 237px;
+  border: 1px solid #ced4da;
+  padding: 6px 28px 6px 12px;
+  border-radius: 4px;
+}
+#country select:focus {
+  border: 1px solid #80bdff;
+  box-shadow: rgba(0, 123, 255, 0.25) 0px 0px 0px 3.2px;
+}
+
+#state {
+  height: 70px;
+  width: 213px;
+  margin-bottom: 16px;
+  padding: 0 15px;
+  position: relative;
+}
+#state label {
+  height: 24px;
+  width: 56px;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+#state select {
+  height: 38px;
+  width: 183px;
+  border: 1px solid #ced4da;
+  padding: 6px 28px 6px 12px;
+  border-radius: 4px;
+}
+#state select:focus {
+  border: 1px solid #80bdff;
+  box-shadow: rgba(0, 123, 255, 0.25) 0px 0px 0px 3.2px;
+}
+#zip {
+  height: 70px;
+  width: 213px;
+  margin-bottom: 16px;
+  padding: 0 15px;
+  position: relative;
+}
+#zip label {
+  height: 24px;
+  width: 56px;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+#zip input {
+  height: 38px;
+  width: 130px;
+  border: 1px solid #ced4da;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+#zip input:focus {
+  border: 1px solid #80bdff;
+  box-shadow: rgba(0, 123, 255, 0.25) 0px 0px 0px 3.2px;
+}
+
+.control {
+  height: 24px;
+  width: 610px;
+  padding-right: 24px;
+  position: relative;
+}
+
+.control label {
+  height: 24px;
+  width: 344px;
+  display: inline-block;
+  position: relative;
+}
+
+.control input:focus {
+  border: 1px solid #80bdff;
+  box-shadow: rgba(0, 123, 255, 0.25) 0px 0px 0px 3.2px;
+}
+
+.payment {
+  height: 24px;
+  width: 610px;
+  position: relative;
+}
+
+.payment label {
+  height: 24px;
+  width: 75px;
+  display: inline-block;
+  position: relative;
+}
+.payment input:focus {
+  border: 1px solid #80bdff;
+  box-shadow: rgba(0, 123, 255, 0.25) 0px 0px 0px 3.2px;
+}
+
+#card {
+  height: 110px;
+  width: 640px;
+  margin: 0 -15px;
+  display:flex
+}
+
+.payCard {
+  height: 94px;
+  width: 320px;
+  margin-right: 16px;
+  padding: 0 15px;
+  position: relative;
+}
+.payCard label {
+  height: 24px;
+  width: 132px;
+  margin-bottom: 8px;
+  margin-top: 8px;
+  display: inline-block;
+}
+
+.payCard input {
+  height: 38px;
+  width: 290px;
+  border: 1px solid #ced4da;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+.payCard small {
+  color: #6c757d;
+}
+
+#expCard {
+    height: 110px;
+    width: 640px;
+    margin: 0 -15px;
+    display:flex
+  }
+
+.ccExpCard{
+    height:70px;
+    width: 160px;
+    margin-bottom:16px;
+    padding: 0 15px;
+    position: relative;
+}
+
+.ccExpCard label{
+    height: 24px;
+    width: 67px;
+    margin-bottom:8px;
+    margin-top:8px;
+    display: inline-block;
+}
+
+.ccExpCard input{
+    height: 38px;
+    width:130px;
+    border: 1px solid #CED4DA;
+    padding: 6px 12px;
+    border-radius: 4px;
+
+}
+
+#checkout{
+    text-align:center;
+    background-color:#007BFF;
+    height: 48px;
+    width: 610px;
+    border: 1px solid #007BFF;
+    padding:8px 16px;
+    border-radius: 4.8px;
+    color: white;
+    font-size: 20px;
+}
