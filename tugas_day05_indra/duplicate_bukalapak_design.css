@@ -1,0 +1,436 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: auto;
+  width: 100%;
+  background-color: #ffffff;
+  font-family: "Quicksand", sans-serif;
+}
+
+section {
+  height: 100vh;
+}
+
+.section-1 {
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 65px;
+}
+#logo {
+  cursor: pointer;
+}
+
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 5px 30px;
+  cursor: pointer;
+}
+
+#nav-item li:nth-of-type(3) {
+  border-right: 1px solid #ced4da;
+}
+
+#content-container {
+  display: flex;
+  flex-grow: 1;
+}
+
+#right-hero {
+  background: url("assets/heroimage.png") no-repeat center;
+  background-size: cover;
+  flex-basis: 43%;
+}
+
+#left-hero {
+  flex-basis: 57%;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 40px 65px;
+  justify-content: space-between;
+}
+
+#content-top {
+  height: 280px;
+  width: 590px;
+  font-size: 62px;
+  font-weight: 700;
+}
+
+#content-bottom {
+  display: flex;
+  width: 230px;
+  align-items: center;
+  font-size: 25px;
+  margin-bottom: 30px;
+}
+
+#content-bottom p {
+  margin-right: 10px;
+}
+
+#content-bottom p:hover {
+  border-bottom: 1px solid;
+  margin-right: 20px;
+  transition: 500ms;
+  cursor: pointer;
+}
+
+.section-2 {
+  display: flex;
+  flex-direction: column;
+  background-color: #ced4da;
+  padding: 40px 65px;
+  height: 2330px;
+  width: 100%;
+}
+
+#section-2-top {
+  display: flex;
+  height: 410px;
+  width: 590px;
+  font-size: 35px;
+  align-items: center;
+}
+
+h4 {
+  font-size: 47px;
+}
+
+#section-2-main {
+  width: 1230px;
+  height: 1640px;
+  display: flex;
+  margin-top: 40px;
+}
+#section-2-main-left {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 33.33%;
+}
+
+#section-2-main-left div:nth-of-type(1) {
+  background: url("assets/col11.png") no-repeat center;
+  background-size: 150px 150px;
+  flex-basis: 25%;
+  background-color: white;
+}
+#section-2-main-left div small {
+  padding: 10px 20px;
+}
+#section-2-main-left div p {
+  padding-left: 20px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+#section-2-main-left div:nth-of-type(2) {
+  background: url("assets/col12.png") no-repeat center;
+  background-size: cover;
+  flex-basis: 50%;
+}
+
+#section-2-main-center {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 33.33%;
+}
+
+#section-2-main-center div:nth-of-type(1) {
+  flex-basis: 25%;
+  background: url(assets/col21.png) no-repeat center;
+  background-size: 500px 300px;
+  background-color: #3838a8;
+}
+#section-2-main-center div:nth-of-type(1) small {
+  padding: 10px 20px;
+  color: white;
+}
+#section-2-main-center div:nth-of-type(1) p {
+  padding-left: 20px;
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+}
+
+#section-2-main-center div:nth-of-type(2) {
+  flex-basis: 25%;
+  background: url(assets/col22.svg) no-repeat center;
+  background-size: 250px 250px;
+  background-color: white;
+}
+#section-2-main-center div:nth-of-type(2) small {
+  padding: 10px 20px;
+}
+#section-2-main-center div:nth-of-type(2) p {
+  padding-left: 20px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+#section-2-main-center div:nth-of-type(3) {
+  flex-basis: 25%;
+  background: url(assets/col23.png) no-repeat center;
+  background-size: 325px 325px;
+  background-color: #f5f5f5;
+}
+#section-2-main-center div:nth-of-type(3) small {
+  padding: 10px 20px;
+}
+#section-2-main-center div:nth-of-type(3) p {
+  padding-left: 20px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+#section-2-main-right {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 33.33%;
+}
+
+#section-2-main-right div:nth-of-type(1) {
+  flex-basis: 50%;
+  background: url(assets/col31.png) no-repeat center;
+  background-size: 300px 600px;
+  background-color: #f5f5f5;
+}
+#section-2-main-right div:nth-of-type(1) small {
+  padding: 10px 20px;
+}
+#section-2-main-right div:nth-of-type(1) p {
+  padding-left: 20px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+#section-2-main-right div:nth-of-type(2) {
+  flex-basis: 25%;
+  background: url(assets/col32.svg) no-repeat center;
+  background-size: 200px 200px;
+  background-color: #e7f4f1;
+}
+#section-2-main-right div:nth-of-type(2) small {
+  padding: 10px 20px;
+}
+#section-2-main-right div:nth-of-type(2) p {
+  padding-left: 20px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+#section-2-main-right div:nth-of-type(3) {
+  flex-basis: 25%;
+  background-color: #e3476f;
+  display: flex;
+  justify-content: space-between;
+}
+#section-2-main-right div:nth-of-type(3) p {
+  font-size: 50px;
+  padding: 10px;
+  font-weight: bold;
+  color: white;
+  display: flex;
+  align-items: flex-end;
+}
+#section-2-main-right div:nth-of-type(3) i {
+  font-size: 25px;
+  padding-left: 10px;
+  color: white;
+  display: flex;
+  align-items: flex-end;
+}
+
+.section-3 {
+  height: 736px;
+  width: 100%;
+  padding: 40px 65px;
+}
+
+.section-3 h4 {
+  padding-top: 40px;
+  margin-top: 20px;
+}
+
+#section-3-content {
+  width: 1230px;
+  height: 501px;
+  display: flex;
+}
+
+#section-3-content-left {
+  flex-basis: 33.33%;
+  margin-right: 40px;
+  margin-top: 50px;
+}
+.hover {
+  opacity: 0;
+  display: flex;
+  font-size: 40px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#section-3-content-left div {
+  background: url(assets/rebody1.png) no-repeat center;
+  background-size: cover;
+  height: 294px;
+  width: 380px;
+  margin-top: 50px;
+}
+#section-3-content-left div:hover .hover {
+  opacity: 1;
+  color: white;
+}
+#section-3-content-left div:hover .hover {
+  transition: 500ms;
+  background: black;
+  opacity: 0.6;
+}
+
+#section-3-content-left h6 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+#section-3-content-left p {
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+#section-3-content-center {
+  flex-basis: 33.33%;
+  margin-top: 50px;
+}
+#section-3-content-center div {
+  background: url(assets/rebody2.png) no-repeat center;
+  background-size: cover;
+  height: 294px;
+  width: 380px;
+  margin-top: 50px;
+}
+#section-3-content-center div:hover .hover {
+  opacity: 1;
+  color: white;
+}
+#section-3-content-center div:hover .hover {
+  transition: 500ms;
+  background: black;
+  opacity: 0.6;
+}
+
+#section-3-content-center h6 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+#section-3-content-center p {
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+#section-3-content-right {
+  flex-basis: 33.33%;
+  margin-left: 40px;
+  margin-top: 50px;
+}
+#section-3-content-right div {
+  background: url(assets/rebody3.png) no-repeat center;
+  background-size: cover;
+  height: 294px;
+  width: 380px;
+  margin-top: 50px;
+}
+
+#section-3-content-right div:hover .hover {
+  opacity: 1;
+  color: white;
+}
+#section-3-content-right div:hover .hover {
+  transition: 500ms;
+  background: black;
+  opacity: 0.6;
+}
+
+#section-3-content-right h6 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+#section-3-content-right p {
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+footer {
+  height: 228px;
+  width: 100%;
+  margin-top: 20px;
+}
+footer nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer div:nth-of-type(1):hover {
+  color: gray;
+}
+footer div:nth-of-type(1) ul li:hover {
+  color: black;
+}
+
+footer div:nth-of-type(2) p:nth-of-type(1) {
+  font-size: 28px;
+}
+footer div:nth-of-type(2) p:nth-of-type(2) {
+  margin-top: 10px;
+}
+
+/* #section-2-main-left div:nth-of-type(1):hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+#section-2-main-left div:nth-of-type(2):hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+#section-2-main-center div:nth-of-type(1):hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+#section-2-main-center div:nth-of-type(2):hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+#section-2-main-center div:nth-of-type(3):hover{
+    opacity: 0.7;
+    cursor: pointer;
+} */
+#section-2-main-left > div:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+#section-2-main-center > div:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+#section-2-main-right > div:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
