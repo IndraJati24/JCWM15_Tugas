@@ -1,0 +1,19 @@
+.home{
+  text-align:center
+}
+.home h4{
+    background-color:blue;
+    border:1px solid transparent;
+    height: 40px;
+    width: 200px;
+    margin:auto;
+    border-radius:15px;
+    color:white;
+}
+.link{
+    color:white
+}
+.link:hover{
+    text-decoration:none;
+    color:white
+}

@@ -1,0 +1,21 @@
+.container{
+  margin:auto;
+  text-align: center;
+  align-items: center;
+  padding:5px
+}
+
+table, th, td, tr {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 10px 8px;
+  margin:auto;
+  text-align: center;
+}
+input{
+  width:200px;
+  height:25px;
+}
+button{
+  height:25px
+}
