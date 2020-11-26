@@ -4,10 +4,10 @@ import "./ToDo_list.css";
 class Todo extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { toDo: ["makan", "minum"], id: [0, 1] };
+    this.state = { toDo: ["makan", "minum"], id: [] };
   }
-  tampilkan = (idx) => {
-    if (idx == this.state.id) {
+  tampilkan = (index) => {
+    if (index == this.state.id) {
       var hasil = this.state.toDo.map((item, index) => (
         <tr key={index}>
           <td>
@@ -66,15 +66,14 @@ class Todo extends React.Component {
     this.setState({ toDo: tempSchedule });
   };
 
-  edit = (idx) => {
-    console.log(`edit ke ${idx}`);
-    this.setState({ id: idx.id });
+  edit = (index) => {
+    console.log(`edit ke ${index}`);
+    let tempId = [...this.state.id];
+    tempId.push(index);
+    this.setState({ id: tempId.id });
   };
   takJadi = () => {
     console.log("tak jadi");
-    {
-      this.tampilkan();
-    }
   };
 
   render() {
