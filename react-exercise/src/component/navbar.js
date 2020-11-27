@@ -16,7 +16,7 @@ class Navigation extends React.Component {
     };
     return (
       <Navbar bg="light" expand="lg" className="navIcon">
-        <i class="fab fa-react"></i>
+        <i className="fab fa-react"></i>
         <Navbar.Brand href="#home" style={styles}>
         <Link to="/content_1" className="link">React-Exercise</Link>
         </Navbar.Brand>
@@ -33,10 +33,10 @@ class Navigation extends React.Component {
               <NavDropdown.Item>
                 <Link to="/ToDo_List">To do list - exercise</Link>
               </NavDropdown.Item>
-              {/* <NavDropdown.Item href="#action/3.2">
-                Another action
+              <NavDropdown.Item>
+                <Link to="/news">News API</Link>
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item> */}
+              {/* <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item> */}
               <NavDropdown.Divider />
               {/* <NavDropdown.Item href="#action/3.4">
                 Separated link
@@ -45,7 +45,7 @@ class Navigation extends React.Component {
           </Nav>
           <Dropdown>
             <Dropdown.Toggle variant="success" id="dropdown-basic">
-            <i class="far fa-user"></i>
+            <i className="far fa-user"></i>
               Username
             </Dropdown.Toggle>
 

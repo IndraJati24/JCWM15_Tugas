@@ -10,6 +10,7 @@ import NotFound from './page/404notfound'
 import Navigation from "./component/navbar";
 import Caro from './component/carousel'
 import Todo from './component/toDo_list/ToDo_List'
+import News from './component/news_api/news'
 
 import {Switch, Route} from 'react-router-dom'
 
@@ -31,6 +32,7 @@ class App extends React.Component {
         <Route path='/content_2' component={Content2}/>
         <Route path='/ToDo_list' component={Todo}/>
         <Route path='/content_1' component={Content1}/>
+        <Route path='/news' component={News}/>
         <Route path='*' component={NotFound}/>
         </Switch>
       </div>
