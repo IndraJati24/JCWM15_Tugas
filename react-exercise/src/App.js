@@ -15,13 +15,6 @@ import News from './component/news_api/news'
 import {Switch, Route} from 'react-router-dom'
 
 class App extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     user: "Orang Asing",
-  //   };
-  // }
-
   render() {
     return (
       <div>
