@@ -1,0 +1,8 @@
+.home {
+  text-align: center;
+}
+.home button {
+  height: 40px;
+  width: 200px;
+  margin: auto;
+}
