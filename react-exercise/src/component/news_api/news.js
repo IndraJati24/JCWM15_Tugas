@@ -110,9 +110,11 @@ class News extends React.Component {
   }
 
   changeCountry = (idx) => {
-    this.setState({ country: this.state.listCountry[idx].id });
-    this.setState({ negara: this.state.listCountry[idx].name });
-    this.setState({ category: "" });
+    this.setState({
+      country: this.state.listCountry[idx].id,
+      negara: this.state.listCountry[idx].name,
+      category: "",
+    });
     this.getNewsApi(idx);
   };
 
@@ -171,7 +173,7 @@ class News extends React.Component {
     });
   };
 
-  showCountry = () => {
+  showListCountry = () => {
     let country = this.state.listCountry.map((item, index) => (
       <NavDropdown.Item onClick={() => this.changeCountry(index)}>
         {item.name}
@@ -214,7 +216,7 @@ class News extends React.Component {
               <Nav className="mr-auto">
                 <NavDropdown title="Country" id="basic-nav-dropdown">
                   <div style={{ overflow: "auto", height: "300px" }}>
-                    {this.showCountry()}
+                    {this.showListCountry()}
                   </div>
                 </NavDropdown>
 
