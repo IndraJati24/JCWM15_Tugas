@@ -110,11 +110,9 @@ class News extends React.Component {
   }
 
   changeCountry = (idx) => {
-    this.setState({
-      country: this.state.listCountry[idx].id,
-      negara: this.state.listCountry[idx].name,
-      category: "",
-    });
+    this.setState({ country: this.state.listCountry[idx].id });
+    this.setState({ negara: this.state.listCountry[idx].name });
+    this.setState({ category: "" });
     this.getNewsApi(idx);
   };
 
@@ -189,10 +187,6 @@ class News extends React.Component {
       </NavDropdown.Item>
     ));
     return category;
-  };
-
-  changeCountry = (value) => {
-    this.setState();
   };
 
   render() {
