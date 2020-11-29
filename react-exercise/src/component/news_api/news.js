@@ -1,8 +1,8 @@
 import React from "react";
 import Axios from "axios";
 import "./news.css";
-// import Dropdown from "../Dropdown";
 
+import ListCountryDropdown from "./country";
 import { Card, Button, Nav, NavDropdown, Navbar } from "react-bootstrap";
 
 class News extends React.Component {
@@ -111,9 +111,11 @@ class News extends React.Component {
   }
 
   changeCountry = (idx) => {
-    this.setState({ country: this.state.listCountry[idx].id });
-    this.setState({ negara: this.state.listCountry[idx].name });
-    this.setState({ category: "" });
+    this.setState({
+      country: this.state.listCountry[idx].id,
+      negara: this.state.listCountry[idx].name,
+      category: "",
+    });
     this.getNewsApi(idx);
   };
 
@@ -190,6 +192,10 @@ class News extends React.Component {
     return category;
   };
 
+  changeCountry = (value) => {
+    this.setState();
+  };
+
   render() {
     let styles = {
       display: "flex",
@@ -204,6 +210,7 @@ class News extends React.Component {
       flexWrap: "wrap",
     };
     console.log(this.state.news);
+    const { isLoading } = this.state;
     return (
       <div>
         <div>
@@ -219,9 +226,7 @@ class News extends React.Component {
                 </NavDropdown>
 
                 <NavDropdown title="Category" id="basic-nav-dropdown">
-                  <div>
-                    {this.showCategory()}
-                  </div>
+                  <div>{this.showCategory()}</div>
                 </NavDropdown>
                 <div style={styles}>
                   <h5 style={{ paddingLeft: "10px" }}>
@@ -234,6 +239,9 @@ class News extends React.Component {
               </Nav>
             </Navbar.Collapse>
           </Navbar>
+        </div>
+        <div>
+          <ListCountryDropdown setCountry={"cek indra"}></ListCountryDropdown>
         </div>
         <div style={card}>{this.showNews()}</div>
       </div>
