@@ -2,7 +2,6 @@ import React from "react";
 import Axios from "axios";
 import "./news.css";
 
-import ListCountryDropdown from "./country";
 import { Card, Button, Nav, NavDropdown, Navbar } from "react-bootstrap";
 
 class News extends React.Component {
@@ -240,9 +239,7 @@ class News extends React.Component {
             </Navbar.Collapse>
           </Navbar>
         </div>
-        <div>
-          <ListCountryDropdown setCountry={"cek indra"}></ListCountryDropdown>
-        </div>
+
         <div style={card}>{this.showNews()}</div>
       </div>
     );
