@@ -1,5 +1,6 @@
 import React from "react";
 import Axios from "axios";
+import "./news.css";
 // import Dropdown from "../Dropdown";
 
 import { Card, Button, Nav, NavDropdown, Navbar } from "react-bootstrap";
@@ -10,7 +11,8 @@ class News extends React.Component {
     this.state = {
       news: [],
       country: "id",
-      category : "sports",
+      category: "",
+      negara: "Indonesia",
       listCountry: [
         {
           name: "Indonesia",
@@ -29,12 +31,40 @@ class News extends React.Component {
           id: "at",
         },
         {
+          name: "Belgium",
+          id: "be",
+        },
+        {
           name: "Brazil",
           id: "br",
         },
         {
+          name: "Bulgaria",
+          id: "bg",
+        },
+        {
+          name: "Canada",
+          id: "ca",
+        },
+        {
+          name: "Colombia",
+          id: "co",
+        },
+        {
+          name: "Cuba",
+          id: "cu",
+        },
+        {
           name: "China",
           id: "cn",
+        },
+        {
+          name: "Czech Republic",
+          id: "cz",
+        },
+        {
+          name: "Egypt",
+          id: "eg",
         },
         {
           name: "France",
@@ -52,6 +82,10 @@ class News extends React.Component {
           name: "Nigeria",
           id: "ng",
         },
+        {
+          name: "South Korea",
+          id: "kr",
+        },
       ],
       listCategory: [
         "business",
@@ -64,8 +98,8 @@ class News extends React.Component {
     };
   }
   componentDidMount() {
-    const { country, category } = this.state;
-    let URL = `http://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=`;
+    const { country } = this.state;
+    let URL = `http://newsapi.org/v2/top-headlines?country=${country}&apiKey=`;
     let KEY = "08bd8662b6804c879c662a27c4a8b1a6";
 
     Axios.get(URL + KEY)
@@ -77,46 +111,54 @@ class News extends React.Component {
   }
 
   changeCountry = (idx) => {
-    this.setState({ country: idx });
+    this.setState({ country: this.state.listCountry[idx].id });
+    this.setState({ negara: this.state.listCountry[idx].name });
+    this.setState({ category: "" });
     this.getNewsApi(idx);
   };
 
   getNewsApi = (idx) => {
-    const { category } = this.state;
-    let URL = `http://newsapi.org/v2/top-headlines?country=${idx}&category=${category}&apiKey=`;
+    let URL = `http://newsapi.org/v2/top-headlines?country=${this.state.listCountry[idx].id}&apiKey=`;
     let KEY = "08bd8662b6804c879c662a27c4a8b1a6";
-    
+
     Axios.get(URL + KEY)
-    .then((respon) => {
-      console.log(respon);
-      this.setState({ news: respon.data.articles });
-    })
-    .catch((error) => console.log(error));
+      .then((respon) => {
+        console.log(respon);
+        this.setState({ news: respon.data.articles });
+      })
+      .catch((error) => console.log(error));
   };
-  
+
   changeCategory = (idx) => {
-    // this.setState({ category :this.state.listCategory[idx]})
-    this.getNewsApiCategory(idx)
-    
-  }
+    this.setState({ category: this.state.listCategory[idx] });
+    this.getNewsApiCategory(idx);
+  };
 
   getNewsApiCategory = (idx) => {
-    const { country } = this.state;
-    let URL = `http://newsapi.org/v2/top-headlines?country=${country}&category=${this.state.listCategory[idx]}&apiKey=`;
+    const { country, listCategory } = this.state;
+    let URL = `http://newsapi.org/v2/top-headlines?country=${country}&category=${listCategory[idx]}&apiKey=`;
     let KEY = "08bd8662b6804c879c662a27c4a8b1a6";
-    
+
     Axios.get(URL + KEY)
-    .then((respon) => {
-      console.log(respon);
-      this.setState({ news: respon.data.articles });
-    })
-    .catch((error) => console.log(error));
+      .then((respon) => {
+        console.log(respon);
+        this.setState({ news: respon.data.articles });
+      })
+      .catch((error) => console.log(error));
   };
-  
+
   showNews = () => {
     return this.state.news.map((item, index) => {
+      let show = {
+        margin: "27px",
+        boxShadow: "10px 10px #0984e3",
+        width: "250px",
+        height: "310px",
+        overflow: "auto",
+        padding: "15px",
+      };
       return (
-        <Card key={index} style={{ width: "18rem", marginRight: "15px" }}>
+        <Card key={index} style={show}>
           <Card.Img variant="top" src={item.urlToImage} />
           <Card.Body>
             <Card.Title>{item.tittle}</Card.Title>
@@ -131,8 +173,8 @@ class News extends React.Component {
   };
 
   showCountry = () => {
-    let country = this.state.listCountry.map((item) => (
-      <NavDropdown.Item onClick={() => this.changeCountry(item.id)}>
+    let country = this.state.listCountry.map((item, index) => (
+      <NavDropdown.Item onClick={() => this.changeCountry(index)}>
         {item.name}
       </NavDropdown.Item>
     ));
@@ -149,29 +191,51 @@ class News extends React.Component {
   };
 
   render() {
+    let styles = {
+      display: "flex",
+      marginLeft: "15px",
+      borderLeft: "1px solid #858686",
+      alignItems: "center",
+      color: "#0984e3",
+    };
+
+    let card = {
+      display: "flex",
+      flexWrap: "wrap",
+    };
     console.log(this.state.news);
     return (
       <div>
         <div>
-          <Navbar bg="light" expand="lg">
+          <Navbar variant="outline-primary" expand="lg">
             <Navbar.Brand href="#home">News API</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="mr-auto">
                 <NavDropdown title="Country" id="basic-nav-dropdown">
-                  {this.showCountry()}
+                  <div style={{ overflow: "auto", height: "300px" }}>
+                    {this.showCountry()}
+                  </div>
                 </NavDropdown>
 
                 <NavDropdown title="Category" id="basic-nav-dropdown">
-                  {this.showCategory()}
+                  <div>
+                    {this.showCategory()}
+                  </div>
                 </NavDropdown>
+                <div style={styles}>
+                  <h5 style={{ paddingLeft: "10px" }}>
+                    Country : {this.state.negara}
+                  </h5>
+                  <h5 style={{ marginLeft: "10px" }}>
+                    Category : {this.state.category}
+                  </h5>
+                </div>
               </Nav>
             </Navbar.Collapse>
           </Navbar>
         </div>
-        <div style={{ display: "flex", flexWrap: "wrap" }}>
-          {this.showNews()}
-        </div>
+        <div style={card}>{this.showNews()}</div>
       </div>
     );
   }
