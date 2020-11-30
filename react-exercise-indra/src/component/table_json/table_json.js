@@ -48,6 +48,7 @@ class TableJson extends React.Component {
                     type="text"
                     placeholder="Enter First Name"
                     ref="firstnameedit"
+                    value = {item.first_name}
                   />
                 </td>
                 <td>
@@ -55,6 +56,7 @@ class TableJson extends React.Component {
                     type="text"
                     placeholder="Enter Last Name"
                     ref="lastnameedit"
+                    value = {item.last_name}
                   />
                 </td>
                 <td>
@@ -62,17 +64,18 @@ class TableJson extends React.Component {
                     type="email"
                     placeholder="Enter Email"
                     ref="emailedit"
+                    value = {item.email}
                   />
                 </td>
                 <td>
-                  <Button
+                  <Button style={{height: "35px"}}
                     onClick={() => {
                       this.handleSave(index);
                     }}
                   >
                     SAVE
                   </Button>
-                  <Button onClick={this.handleCancel}>CANCEL</Button>
+                  <Button style={{height: "35px"}} onClick={this.handleCancel}>CANCEL</Button>
                 </td>
               </tr>
             );
@@ -84,14 +87,14 @@ class TableJson extends React.Component {
                 <td>{item.last_name}</td>
                 <td>{item.email}</td>
                 <td>
-                  <Button
+                  <Button style={{height: "35px"}}
                     onClick={() => {
                       this.handleEdit(index);
                     }}
                   >
                     EDIT
                   </Button>
-                  <Button onClick={() => this.handleDelete(item.id)}>
+                  <Button style={{height: "35px"}}onClick={() => this.handleDelete(item.id)}>
                     DELETE
                   </Button>
                 </td>
@@ -126,7 +129,7 @@ class TableJson extends React.Component {
             <Form.Control type="email" placeholder="Enter Email" ref="email" />
           </td>
           <td>
-            <Button onClick={this.handleAdd}>SUBMIT</Button>
+            <Button style={{height: "35px"}}onClick={this.handleAdd}>SUBMIT</Button>
           </td>
         </tr>
       </tbody>
@@ -139,13 +142,13 @@ class TableJson extends React.Component {
         <tr>
           <td></td>
           <td>
-            <Button onClick={this.sortFirstName}>Sort</Button>
+            <Button style={{height: "35px"}}onClick={this.sortFirstName}>Sort</Button>
           </td>
           <td>
-            <Button onClick={this.sortLastName}>Sort</Button>
+            <Button style={{height: "35px"}}onClick={this.sortLastName}>Sort</Button>
           </td>
           <td>
-            <Button onClick={this.sortEmail}>Sort</Button>
+            <Button style={{height: "35px"}}onClick={this.sortEmail}>Sort</Button>
           </td>
           <td></td>
         </tr>
@@ -210,7 +213,6 @@ class TableJson extends React.Component {
       indexForm: index,
     });
 
-    this.tableBody();
   };
 
   handleSave = (index) => {
