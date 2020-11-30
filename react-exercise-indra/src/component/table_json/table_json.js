@@ -7,7 +7,6 @@ class TableJson extends React.Component {
     super(props);
     this.state = {
       dbUsers: [],
-      editForm: false,
       indexForm: -1,
     };
   }
@@ -35,7 +34,7 @@ class TableJson extends React.Component {
     );
   };
 
-  tableBody = (idx) => {
+  tableBody = () => {
     let { dbUsers, indexForm } = this.state;
     return (
       <tbody>
@@ -66,8 +65,14 @@ class TableJson extends React.Component {
                   />
                 </td>
                 <td>
-                  <Button>SAVE</Button>
-                  <Button>CANCEL</Button>
+                  <Button
+                    onClick={() => {
+                      this.handleSave(index);
+                    }}
+                  >
+                    SAVE
+                  </Button>
+                  <Button onClick={this.handleCancel}>CANCEL</Button>
                 </td>
               </tr>
             );
@@ -128,9 +133,30 @@ class TableJson extends React.Component {
     );
   };
 
+  tableSort = () => {
+    return (
+      <thead>
+        <tr>
+          <td></td>
+          <td>
+            <Button onClick={this.sortFirstName}>Sort</Button>
+          </td>
+          <td>
+            <Button onClick={this.sortLastName}>Sort</Button>
+          </td>
+          <td>
+            <Button onClick={this.sortEmail}>Sort</Button>
+          </td>
+          <td></td>
+        </tr>
+      </thead>
+    );
+  };
+
   table = () => {
     return (
       <Table>
+        {this.tableSort()}
         {this.tableHead()}
         {this.tableBody()}
         {this.tableInput()}
@@ -180,14 +206,78 @@ class TableJson extends React.Component {
   };
 
   handleEdit = (index) => {
-    console.log(`edit, ${index}`);
     this.setState({
-      editForm: true,
       indexForm: index,
     });
 
     this.tableBody();
   };
+
+  handleSave = (index) => {
+    let first_name = this.refs.firstnameedit.value;
+    let last_name = this.refs.lastnameedit.value;
+    let email = this.refs.emailedit.value;
+
+    const { dbUsers } = this.state;
+    Axios.put(`http://localhost:2000/users/${dbUsers[index].id}`, {
+      first_name,
+      last_name,
+      email,
+    })
+      .then((res) => {
+        console.log(res.data);
+        Axios.get("http://localhost:2000/users")
+          .then((res) => {
+            console.log(res.data);
+            this.setState({ dbUsers: res.data });
+          })
+          .catch((err) => console.log(err));
+      })
+      .catch((err) => console.log(err));
+
+    this.setState({ indexForm: -1 });
+  };
+
+  handleCancel = () => {
+    Axios.get("http://localhost:2000/users")
+      .then((res) => {
+        console.log(res.data);
+        this.setState({ dbUsers: res.data });
+      })
+      .catch((err) => console.log(err));
+
+    this.setState({ indexForm: -1 });
+  };
+
+  sortFirstName = () => {
+    console.log("sort first  name")
+    Axios.get("http://localhost:2000/users?_sort=first_name&_order=asc")
+    .then((res) => {
+      console.log(res.data);
+      this.setState({ dbUsers: res.data });
+    })
+    .catch((err) => console.log(err));
+  }
+
+  sortLastName = () => {
+    console.log("sort first  name")
+    Axios.get("http://localhost:2000/users?_sort=lirst_name&_order=asc")
+    .then((res) => {
+      console.log(res.data);
+      this.setState({ dbUsers: res.data });
+    })
+    .catch((err) => console.log(err));
+  }
+
+  sortEmail = () => {
+    console.log("sort first  name")
+    Axios.get("http://localhost:2000/users?_sort=email&_order=asc")
+    .then((res) => {
+      console.log(res.data);
+      this.setState({ dbUsers: res.data });
+    })
+    .catch((err) => console.log(err));
+  }
 
   render() {
     console.log(this.state.dbUsers);
