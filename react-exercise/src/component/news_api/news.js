@@ -119,7 +119,8 @@ class News extends React.Component {
   };
 
   getNewsApi = (idx) => {
-    let URL = `http://newsapi.org/v2/top-headlines?country=${this.state.listCountry[idx].id}&apiKey=`;
+    const { listCountry } = this.state;
+    let URL = `http://newsapi.org/v2/top-headlines?country=${listCountry[idx].id}&apiKey=`;
     let KEY = "08bd8662b6804c879c662a27c4a8b1a6";
 
     Axios.get(URL + KEY)
@@ -175,7 +176,7 @@ class News extends React.Component {
 
   showListCountry = () => {
     let country = this.state.listCountry.map((item, index) => (
-      <NavDropdown.Item onClick={() => this.changeCountry(index)}>
+      <NavDropdown.Item key={index} onClick={() => this.changeCountry(index)}>
         {item.name}
       </NavDropdown.Item>
     ));
@@ -184,7 +185,7 @@ class News extends React.Component {
 
   showCategory = () => {
     let category = this.state.listCategory.map((item, index) => (
-      <NavDropdown.Item onClick={() => this.changeCategory(index)}>
+      <NavDropdown.Item key={index} onClick={() => this.changeCategory(index)}>
         {item}
       </NavDropdown.Item>
     ));

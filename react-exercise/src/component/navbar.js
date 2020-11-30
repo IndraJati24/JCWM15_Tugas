@@ -36,6 +36,9 @@ class Navigation extends React.Component {
               <NavDropdown.Item>
                 <Link to="/news">News API</Link>
               </NavDropdown.Item>
+              <NavDropdown.Item>
+                <Link to="/table_json">Table Json</Link>
+              </NavDropdown.Item>
               {/* <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item> */}
               <NavDropdown.Divider />
               {/* <NavDropdown.Item href="#action/3.4">
