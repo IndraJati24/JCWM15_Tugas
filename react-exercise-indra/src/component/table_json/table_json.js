@@ -7,7 +7,7 @@ class TableJson extends React.Component {
     super(props);
     this.state = {
       dbUsers: [],
-      indexForm: -1,
+      indexForm: null,
     };
   }
 
@@ -237,7 +237,7 @@ class TableJson extends React.Component {
       })
       .catch((err) => console.log(err));
 
-    this.setState({ indexForm: -1 });
+    this.setState({ indexForm: null });
   };
 
   handleCancel = () => {
@@ -248,7 +248,7 @@ class TableJson extends React.Component {
       })
       .catch((err) => console.log(err));
 
-    this.setState({ indexForm: -1 });
+    this.setState({ indexForm: null });
   };
 
   sortFirstName = () => {
@@ -263,7 +263,7 @@ class TableJson extends React.Component {
 
   sortLastName = () => {
     console.log("sort first  name")
-    Axios.get("http://localhost:2000/users?_sort=lirst_name&_order=asc")
+    Axios.get("http://localhost:2000/users?_sort=last_name&_order=asc")
     .then((res) => {
       console.log(res.data);
       this.setState({ dbUsers: res.data });

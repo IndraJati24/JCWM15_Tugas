@@ -30,5 +30,20 @@
       "last_name": "Bacon",
       "email": "rogerbacon12@yahoo.com"
     }
+  ],
+  
+  "userLogin" : [
+    {
+      "id":1,
+      "username": "indra",
+      "password": "1234",
+      "email": "indra@yahoo.com"
+    },
+    {
+      "id":2,
+      "username": "jati",
+      "password": "1234",
+      "email": "jati@yahoo.com"
+    }
   ]
 }
