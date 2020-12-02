@@ -31,19 +31,24 @@
       "email": "rogerbacon12@yahoo.com"
     }
   ],
-  
-  "userLogin" : [
+  "userLogin": [
     {
-      "id":1,
+      "id": 1,
       "username": "indra",
       "password": "1234",
       "email": "indra@yahoo.com"
     },
     {
-      "id":2,
+      "id": 2,
       "username": "jati",
       "password": "1234",
       "email": "jati@yahoo.com"
+    },
+    {
+      "username": "putri",
+      "password": "1234",
+      "email": "putri@gmail.com",
+      "id": 3
     }
   ]
 }

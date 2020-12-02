@@ -10,7 +10,7 @@ class News extends React.Component {
     this.state = {
       news: [],
       country: "id",
-      category: "",
+      category: "General",
       negara: "Indonesia",
       listCountry: [
         {
@@ -113,7 +113,7 @@ class News extends React.Component {
     this.setState({
       country: this.state.listCountry[idx].id,
       negara: this.state.listCountry[idx].name,
-      category: "",
+      category: "General",
     });
     this.getNewsApi(idx);
   };
@@ -206,7 +206,7 @@ class News extends React.Component {
       flexWrap: "wrap",
     };
     console.log(this.state.news);
-    const { isLoading } = this.state;
+    
     return (
       <div>
         <div>
